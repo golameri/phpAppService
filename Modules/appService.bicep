@@ -13,7 +13,6 @@ resource appServicePlan 'Microsoft.Web/serverFarms@2020-06-01' = {
   sku: {
     name: 'B2'
     //tier?
-    // linux or windows?
   }
 }
 
