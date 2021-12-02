@@ -12,7 +12,6 @@ resource appServicePlan 'Microsoft.Web/serverFarms@2020-06-01' = {
   }
   sku: {
     name: 'B2'
-    //tier?
   }
 }
 
@@ -25,7 +24,7 @@ resource appServiceApp 'Microsoft.Web/sites@2020-06-01' = {
     httpsOnly: true
     clientAffinityEnabled: false
     siteConfig: {      
-      linuxFxVersion: 'PHP|8.0'
+      linuxFxVersion: 'PHP|7.3'
       alwaysOn: true
     }
   }

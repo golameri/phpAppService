@@ -38,3 +38,4 @@ module mySql 'Modules/mySql.bicep' = {
 output webPhpName string = appService.outputs.webAppName
 output storageName string = storageAccount.outputs.storageName
 output storageKey string = storageAccount.outputs.accessKey
+output mySqlName string = mySql.outputs.mySqlName

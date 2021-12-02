@@ -4,7 +4,7 @@ param location string
 @secure()
 param adminPassword string
 
-
+// creates MySQL--Flexible servers
 resource mySql 'Microsoft.DBforMySQL/flexibleServers@2021-05-01' = {
   name: 'mysql-${suffix}'
   location: location
@@ -27,4 +27,4 @@ resource mySql 'Microsoft.DBforMySQL/flexibleServers@2021-05-01' = {
   }
 }
 
-
+output mySqlName string = mySql.name

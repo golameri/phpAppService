@@ -1,6 +1,5 @@
 param suffix string
 param fileShareName string
-//param fileServiceName string
 param location string
 
 // creates Storage Account
