@@ -1,5 +1,8 @@
 param location string
 param fileShareName string
+param adminUsername string
+@secure()
+param adminPassword string
 
 var suffix = uniqueString(resourceGroup().id)
 
@@ -18,6 +21,16 @@ module appService 'Modules/appService.bicep' = {
   params: {
     location: location
     suffix: suffix
+  }
+}
+
+module mySql 'Modules/mySql.bicep' = {
+  name: 'mySql'
+  params: {
+    location: location
+    suffix: suffix
+    adminPassword: adminPassword
+    adminUserName:adminUsername
   }
 }
 
