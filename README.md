@@ -25,7 +25,7 @@ adminUsername=$MYSQL_ADMIN_NAME adminPassword=$MYSQL_ADMIN_PASSWORD
 
 Once the deployment is finished, you should see an ouput section like this.
 
-IMAGE
+![img](https://raw.githubusercontent.com/golameri/phpAppService/master/pictures/outputs.png)
 
 Copy the value of the **storageKey**,**storageName** and **webPhpName**, you need it to mounth the file share to the Web App.
 
