@@ -6,6 +6,13 @@ param adminPassword string
 
 var suffix = uniqueString(resourceGroup().id)
 
+// parameters for app service
+param webAppSubnetAddressPrefix string
+param webAppPrivateEndpointName string
+param webAppPrivateDnsName string
+param webAppPrivateLinkName string
+param webAppSubnetName string
+
 module storageAccount 'Modules/storage.bicep' = {
   name: 'storage'
   params: {
@@ -15,12 +22,16 @@ module storageAccount 'Modules/storage.bicep' = {
   }
 }
 
-
 module appService 'Modules/appService.bicep' = {
   name: 'appService'
   params: {
     location: location
     suffix: suffix
+    webAppSubnetAddressPrefix: webAppSubnetAddressPrefix
+    webAppPrivateEndpointName: webAppPrivateEndpointName
+    webAppPrivateDnsName: webAppPrivateDnsName
+    webAppPrivateLinkName: webAppPrivateLinkName
+    webAppSubnetName:webAppSubnetName
   }
 }
 
