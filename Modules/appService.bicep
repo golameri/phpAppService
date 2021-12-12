@@ -38,13 +38,13 @@ resource appServiceApp 'Microsoft.Web/sites@2020-06-01' = {
   }
 }
 
-resource webAppAppSettings 'Microsoft.Web/sites/config@2020-06-01' = {
-  name: '${appServiceApp.name}/appsettings'
-  properties: {
-    'WEBSITE_DNS_SERVER': '168.63.129.16'
-    'WEBSITE_VNET_ROUTE_ALL': '1'
-  }
-}
+// resource webAppAppSettings 'Microsoft.Web/sites/config@2020-06-01' = {
+//   name: '${appServiceApp.name}/appsettings'
+//   properties: {
+//     'WEBSITE_DNS_SERVER': '168.63.129.16'
+//     'WEBSITE_VNET_ROUTE_ALL': '1'
+//   }
+// }
 
 output webAppName string = appServiceApp.name
 

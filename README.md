@@ -37,8 +37,8 @@ Now run the command below, be sure to put the mounth path to what it's used in y
 
 ```bash
 
-az webapp config storage-account add --resource-group $RG_HUB --name $WEB_APP_NAME--custom-id myid --storage-type AzureFiles \
---share-name $FILESHARENAME --account-name <storage-account-name> --access-key "<access-key>" --mount-path <mount-path-directory>
+az webapp config storage-account add --resource-group $RG_HUB --name $WEB_APP_NAME --custom-id myid --storage-type AzureFiles \
+--share-name $FILESHARENAME --account-name $STR_NAME --access-key "<access-key>" --mount-path <mount-path-directory>
 
 ```
 
