@@ -1,17 +1,10 @@
-param strName string
+param suffix string
 param fileShareName string
 param location string
 
-var privateDNSZoneName = 'privatelink.file.core.windows.net'
-
-resource privateDnsZones 'Microsoft.Network/privateDnsZones@2018-09-01' = {
-  name: privateDNSZoneName
-  location: 'global'
-}
-
 // creates Storage Account
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
-  name: strName
+  name: 'storage${suffix}'
   location: location
   kind:'StorageV2'
   sku:{
