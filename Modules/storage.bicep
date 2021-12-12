@@ -19,6 +19,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   }
   properties:{
     accessTier: 'Hot'
+    networkAcls: {
+      defaultAction: 'Deny'
+    }
   }
 }
 
